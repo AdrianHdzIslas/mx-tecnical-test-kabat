@@ -20,6 +20,6 @@ public record ProductModel
         if (newStock < 0) {
             throw new IllegalStateException("Stock can't be negative");
         }
-        return new ProductModel(idProduct, name, price, stock, active);
+        return new ProductModel(idProduct, name, price, newStock, active);
     }
 }
