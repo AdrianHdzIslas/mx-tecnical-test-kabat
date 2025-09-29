@@ -36,8 +36,9 @@ public class OrderRepository implements OrderRepositoryPort {
 
     @Override
     public OrderModel findById(Long id) {
-        OrderEntity orderEntity = orderJpaRepository.findById(id).orElse(null);
-        return OrderMapper.toDomain(orderEntity);
+        return orderJpaRepository.findById(id)
+                .map(OrderMapper::toDomain)
+                .orElse(null);
     }
 
     @Override
