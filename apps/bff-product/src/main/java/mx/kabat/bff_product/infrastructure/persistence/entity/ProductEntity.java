@@ -4,11 +4,13 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Check;
 
 import java.math.BigDecimal;
 
 @Entity
 @Table(name = "product")
+@Check(constraints = "stock >= 0")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
