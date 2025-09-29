@@ -31,7 +31,11 @@ class ProductServiceTest {
 
     @BeforeEach
     void setUp() {
-        sampleProduct = new ProductModel(1L, "Laptop",new BigDecimal("100.5"), 10, true); // ajusta al constructor real
+        sampleProduct = new ProductModel(1L
+                , "Laptop"
+                ,new BigDecimal("100.5")
+                , 10
+                , true);
     }
 
     @Test
