@@ -42,5 +42,31 @@ cd apps/bff-order     # Microservicio de órdenes
 
 ```bash
 mvn clean install
-mvn spring-boot:run
+mvn spring-boot:run #Los puertos `8082` y `8081`  deben estar disponibles.
 ```
+### 📘 4. Ejemplos de uso
+
+La documentacion de uso de las apis se encuentran en los siguientes directorios:
+
++ [bbf-order](./apps/bff-order/HELP.md)
+
++ [bbf-product](./apps/bff-product/HELP.md)
+
+
+### ▶️ 5. Ejecutar prubas unitarias
+
+```bash
+mvn test #Segun el Microservicio seleccionado
+```
+## 📘 Documentación de la API (Swagger UI)
+
+Este proyecto expone su documentación de endpoints REST utilizando **Swagger UI**, gracias a la integración con [SpringDoc OpenAPI](https://springdoc.org/).
+
+### ✅ Acceso a la documentación
+
+Una vez que la aplicación esté en ejecución, puedes acceder a Swagger UI desde:
+
+`bff-order` http://localhost:8082/swagger-ui/index.html
+
+`bff-order` http://localhost:8081/swagger-ui/index.html
+
